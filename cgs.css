@@ -1,0 +1,32 @@
+.cgs_search {
+	padding-top:100px;
+	
+}
+
+.cgs_search input {
+	width: 600px;
+	padding-left: 41px!important;
+}
+.store_name {
+	font-size: 32px;
+}
+
+.store_city {
+	margin-top: -10px;
+	margin-bottom: -10px;
+	font-size: 16px;
+	color: #828282;
+}
+
+.xbox_image {
+	top: 5.5px;
+	left: 6.5px;
+	position: absolute!important;
+	cursor: pointer;
+}
+
+/*.xbox_image:hover{
+	zoom: 1.4;
+	top: 0px;
+	left: 0px;
+}*/
