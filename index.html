@@ -22,9 +22,11 @@
 							<i class="search icon" v-show="load_icon"></i>
 						</div>
 
-					    <div v-for='result in cgs_data'>
-					        <h3>{{ result.games_list }}</h3>
-					    </div>
+						    <div v-for='result in cgs_data'>
+
+						    	<div v-for='city in result.mvideo'>
+						        <h3>{{ city }}</h3>
+						    </div>
 					</div>
 				</div>
 			</div>
