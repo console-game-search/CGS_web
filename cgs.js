@@ -43,7 +43,7 @@ new Vue(
         fetch: function (game_name) 
         {
             this.load_icon = true;
-            fetch('http://94.180.83.232/?game_name='+game_name)
+            fetch('http://194.58.103.53/?game_name='+game_name)
             .then((response) => 
             {
                 this.load_icon = false;
