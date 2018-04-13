@@ -1,49 +1,3 @@
-function show_result (input)
-{
-    // var game_card_template = $('#template').html(); //game_card template
-
-    // $(container).append("<div class='store_name'>"+store+"</div><br>");
-    // $(container).append("<div class='store_city'>"+city+"</div><br>");
-    // result.forEach(function(item, i, arr) 
-    // {
-    //     template = game_card_template.replace(/{[^{}]+}/g, function(key)
-    //     {
-    //         return item[key.replace(/[{}]+/g, "")] || "";
-    //     });
-    //     $(container).append(template);
-    // });
-    // 
-    var out = "";
-    var render = "";
-    input = JSON.parse(JSON.stringify(imput.data));
-    input.forEach(function(item, i, arr) 
-    {
-        if (typeof item.mvideo.result !== "undefined") 
-        {
-        render += '<thead><th colspan="2">mvideo</th></thead>';
-        item.mvideo.result.forEach(function(item2, i2, arr2) 
-        {
-             render += '<tr><th>'+item2.game_name+'</th><th>'+item2.game_price+'</th></tr>';
-        });
-    }
-       
-        
-        // {
-           // out += JSON.stringify(item.mvideo);
-            //out += JSON.stringify(item.dns);
-           // out += JSON.stringify(item.dns);
-        //}
-        //template = game_card_template.replace(/{[^{}]+}/g, function(key)
-        //{
-            //return item[key.replace(/[{}]+/g, "")] || "";
-        //});
-        //$(container).append(template);
-    });
-
-    console.log(render);
-    return render;
-}
-
 new Vue(
 {
     el: '#app',
@@ -57,7 +11,8 @@ new Vue(
         fetch: function (game_name) 
         {
             this.load_icon = true;
-            fetch('http://194.58.103.53/?game_name=diablo'+game_name)
+            //fetch('http://194.58.103.53/?game_name=diablo'+game_name)
+            fetch('http://localhost:9001/?game_name='+game_name)
             .then((response) => 
             {
                 this.load_icon = false;

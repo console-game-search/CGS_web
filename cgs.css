@@ -1,11 +1,15 @@
 .cgs_search {
 	padding-top:100px;
-	
+	display: inline-block;
 }
 
 .cgs_search input {
 	width: 600px;
 	padding-left: 41px!important;
+}
+
+.ui.icon.input {
+	margin-bottom:10px;
 }
 .store_name {
 	font-size: 32px;
@@ -25,6 +29,13 @@
 	cursor: pointer;
 }
 
+.result_table {
+
+}
+
+.result_table tr {
+	cursor: pointer;
+}
 /*.xbox_image:hover{
 	zoom: 1.4;
 	top: 0px;

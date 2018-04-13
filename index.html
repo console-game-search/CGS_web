@@ -22,11 +22,43 @@
 							<i class="search icon" v-show="load_icon"></i>
 						</div>
 
-						    <div v-for='result in cgs_data'>
 
-						    	<div v-for='city in result.mvideo'>
-						        <h3>{{ city }}</h3>
-						    </div>
+							
+
+
+
+
+
+
+						<div v-for='search_result in cgs_data'>
+							<!-- mvideo results-->
+							<table class="ui single line table selectable result_table" v-for='mvideo in search_result.mvideo'>
+								<thead>
+							    	<tr><th><div class="ui ribbon label">Mvideo</div></th>
+							    	<th></th>
+							  		</tr>
+							  	</thead>
+
+					    		<tbody v-for='game in mvideo'>
+									<tr>
+							      		<td>
+							        		<h4 class="ui image header">
+							          			<img v-bind:src="game.game_img" class="ui mini rounded image">
+							          			<div class="content">
+							            			{{ game.game_name }} 
+							            			<div class="sub header">{{game.game_city}}</div>
+							        			</div>
+							      			</h4>
+							      		</td>
+							      		<td>
+							      			<h4>{{game.game_price}}</h5>
+							      		</td>
+							    	</tr>  
+					    		</tbody>
+							</table>
+
+						</div>
+
 					</div>
 				</div>
 			</div>
