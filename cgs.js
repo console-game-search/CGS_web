@@ -4,6 +4,7 @@ new Vue(
     data: 
     {
         cgs_data: "",
+        stores: ["search_result.mvideo", "search_result.dns", "search_result.eldorado"],
         load_icon: false
     },
     methods: 
@@ -25,6 +26,7 @@ new Vue(
             .then((json) => 
             {
                 this.cgs_data = json.data
+                console.log(json.data);
             })
             .catch((error) => 
             {

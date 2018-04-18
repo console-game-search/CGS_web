@@ -32,16 +32,17 @@
 
 						<div v-for='search_result in cgs_data'>
 							<!-- mvideo results-->
-							<table class="ui single line table selectable result_table" v-for='mvideo in search_result.mvideo'>
+							<table class="ui single line table selectable result_table" v-for="store_data in search_result.result">
 								<thead>
-							    	<tr><th><div class="ui ribbon label">Mvideo</div></th>
+							    	<tr><th><div class="ui ribbon label" style="background-color: #ed1c24; color: white">{{search_result.store}}</div></th>
+							    	<th></th>
 							    	<th></th>
 							  		</tr>
 							  	</thead>
 
-					    		<tbody v-for='game in mvideo'>
+					    		<tbody v-for='game in store_data'>
 									<tr>
-							      		<td>
+							      		<td href="/lol">
 							        		<h4 class="ui image header">
 							          			<img v-bind:src="game.game_img" class="ui mini rounded image">
 							          			<div class="content">
@@ -51,13 +52,17 @@
 							      			</h4>
 							      		</td>
 							      		<td>
-							      			<h4>{{game.game_price}}</h5>
+							      			<h4>{{game.game_price}}</h4>
+							      		</td>
+							      		<td>
+											<a class="ui icon button" v-bind:href="game.game_url"><i class="cart arrow down icon"></i></a>
 							      		</td>
 							    	</tr>  
 					    		</tbody>
 							</table>
-
 						</div>
+
+
 
 					</div>
 				</div>
