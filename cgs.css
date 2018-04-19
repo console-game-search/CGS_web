@@ -30,14 +30,29 @@
 }
 
 .result_table {
-
+	margin-bottom:10px!important;
+	margin-left:1px!important;
 }
 
 .result_table tr {
 	cursor: pointer;
 }
-/*.xbox_image:hover{
-	zoom: 1.4;
-	top: 0px;
-	left: 0px;
-}*/
+
+.store_name {
+	padding-left:17px!important;
+	padding-bottom:8px!important;
+	color:#FFFFFF!important;
+	background-color:#2C2C2C!important;
+}
+
+.th_game_url {
+	width: 10%;
+}
+
+.th_game_price {
+	width: 16%;
+}
+
+.game_price_label {
+	margin-top: 6px!important;
+}

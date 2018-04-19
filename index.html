@@ -13,7 +13,8 @@
 	<body>
 		<div class="ui main text container center aligned">
 			<div class="ui loading search cgs_search">
-				<div class="cgs_search_result">
+				<div>
+
 					<div id='app'>
 
 						<div class="ui icon input">
@@ -23,20 +24,12 @@
 						</div>
 
 
-							
-
-
-
-
-
-
 						<div v-for='search_result in cgs_data'>
-							<!-- mvideo results-->
-							<table class="ui single line table selectable result_table" v-for="store_data in search_result.result">
+							<table class="ui single line table selectable fixed result_table" v-for="store_data in search_result.result">
 								<thead>
-							    	<tr><th><div class="ui ribbon label" style="background-color: #ed1c24; color: white">{{search_result.store}}</div></th>
-							    	<th></th>
-							    	<th></th>
+							    	<tr class="th_game_name"><th> <div class="ui large label">{{search_result.store}}</div></th>
+							    	<th class="th_game_price"></th>
+							    	<th class="th_game_url"></th>
 							  		</tr>
 							  	</thead>
 
@@ -52,7 +45,7 @@
 							      			</h4>
 							      		</td>
 							      		<td>
-							      			<h4>{{game.game_price}}</h4>
+							      			<div class="ui tag labels"><a class="ui label black game_price_label">{{game.game_price}}</a></div>
 							      		</td>
 							      		<td>
 											<a class="ui icon button" v-bind:href="game.game_url"><i class="cart arrow down icon"></i></a>
@@ -63,7 +56,6 @@
 						</div>
 
 
-
 					</div>
 				</div>
 			</div>
@@ -72,14 +64,3 @@
 </html>
 
 <script src="cgs.js"></script>
-
-
-<!-- <script id="template" type="text/jquery-tmpl">
-  	<div class="item" style="white-space: nowrap;">
-    	<img class="ui avatar image" src="{game_img}">
-    	<div class="content"  style="text-overflow: ellipsis; width: 90%!important;overflow: hidden;">
-      		<div class="header">{game_name}</div>
-      		<div class="description">{game_price}₽</div>
-    	</div>
-  	</div>
-</script>  -->

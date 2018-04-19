@@ -13,7 +13,7 @@ new Vue(
         {
             this.load_icon = true;
             //fetch('http://194.58.103.53/?game_name=diablo'+game_name)
-            fetch('http://localhost:9001/?game_name='+game_name)
+            fetch('http://194.58.103.53:9001/?game_name='+game_name)
             .then((response) => 
             {
                 this.load_icon = false;
